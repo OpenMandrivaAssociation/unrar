@@ -1,16 +1,13 @@
 %define name		unrar
 %define summary		Decompressor for .rar format archives
-%define version		3.71
-%define prerel beta1
-%define fversion	3.7.8
-%define rel		2
-%define release %mkrel  0.%prerel.%rel
+%define version		3.7.8
+%define rel		1
 
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}
+Release:	%{mkrel %rel}
 Summary:	%{summary}
-Source:		http://www.rarlab.com/rar/%{name}src-%fversion.tar.gz
+Source:		http://www.rarlab.com/rar/%{name}src-%version.tar.gz
 Source1:	unrar-bash-completion-20031225.bz2
 Url:		http://www.rarlab.com/rar_add.htm
 License:	Freeware
