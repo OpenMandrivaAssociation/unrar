@@ -1,10 +1,10 @@
 %define name		unrar
 %define summary		Decompressor for .rar format archives
 %define version		3.80
-%define prerel beta1
-%define fversion	3.8.1
+%define prerel beta2
+%define fversion	3.8.2
 %define rel		1
-%define release %mkrel  0.%prerel.%rel
+%define release %mkrel -c %prerel %rel
 
 Name:		%{name}
 Version:	%{version}
