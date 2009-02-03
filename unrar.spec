@@ -2,7 +2,7 @@
 %define summary		Decompressor for .rar format archives
 %define version		3.80
 %define fversion	3.8.5
-%define rel		1
+%define rel		2
 %define release %mkrel %rel
 
 Name:		%{name}
@@ -10,7 +10,6 @@ Version:	%{version}
 Release:	%{release}
 Summary:	%{summary}
 Source:		http://www.rarlab.com/rar/%{name}src-%fversion.tar.gz
-Source1:	unrar-bash-completion-20031225.bz2
 Url:		http://www.rarlab.com/rar_add.htm
 License:	Freeware
 Group:		Archiving/Compression
@@ -31,8 +30,6 @@ make -f makefile.unix CXXFLAGS="$RPM_OPT_FLAGS" STRIP=true
 %install
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
 install -m 755 unrar $RPM_BUILD_ROOT%{_bindir}
-install -d -m 755 %buildroot/%_sysconfdir/bash_completion.d
-bzip2 -cd %SOURCE1 > %buildroot/%_sysconfdir/bash_completion.d/unrar
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
@@ -40,6 +37,5 @@ rm -rf ${RPM_BUILD_ROOT}
 %files
 %defattr(-,root,root)
 %doc license.txt readme.txt
-%config(noreplace) %_sysconfdir/bash_completion.d/unrar
 %{_bindir}/unrar
 
