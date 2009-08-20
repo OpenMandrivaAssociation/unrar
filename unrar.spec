@@ -2,8 +2,7 @@
 %define summary		Decompressor for .rar format archives
 %define version		3.90
 %define fversion	3.9.6
-%define rel		1
-%define release %mkrel %rel
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
