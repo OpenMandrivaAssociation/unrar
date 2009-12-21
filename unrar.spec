@@ -1,8 +1,8 @@
 %define name		unrar
 %define summary		Decompressor for .rar format archives
-%define version		3.90
-%define fversion	3.9.6
-%define release %mkrel 2
+%define version		3.91
+%define fversion	3.9.7
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -20,13 +20,13 @@ The unrar program is used to uncompress .rar format archives, which were
 somewhat popular on DOS based machines.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
 %setup -q -n %name
 
 %build
-make -f makefile.unix CXXFLAGS="$RPM_OPT_FLAGS" STRIP=true
+make -f makefile.unix CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" STRIP=true
 
 %install
+rm -rf ${RPM_BUILD_ROOT}
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
 install -m 755 unrar $RPM_BUILD_ROOT%{_bindir}
 
