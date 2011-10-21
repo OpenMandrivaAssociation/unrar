@@ -1,5 +1,5 @@
-%define oversion 4.1.1
-%define prerel beta1
+%define oversion 4.1.2
+%define prerel beta2
 Name:		unrar
 Version:	4.10
 Release:	%mkrel -c %prerel 1
