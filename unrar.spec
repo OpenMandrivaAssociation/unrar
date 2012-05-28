@@ -1,7 +1,7 @@
 %define oversion 4.2.3
 Name:		unrar
 Version:	4.20
-Release:	%mkrel -c beta2 2
+Release:	%mkrel -c beta3 1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%oversion.tar.gz
 Url:		http://www.rarlab.com/rar_add.htm
