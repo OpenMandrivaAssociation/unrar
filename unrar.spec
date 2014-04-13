@@ -1,7 +1,7 @@
-%define oversion 5.1.1
+%define oversion 5.1.2
 
 Name:		unrar
-Version:	5.1.1
+Version:	5.1.2
 Release:	1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%oversion.tar.gz
