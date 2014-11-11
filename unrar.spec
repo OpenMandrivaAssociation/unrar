@@ -1,8 +1,8 @@
-%define oversion 5.1.5
+%define oversion 5.2.2
 
 Name:		unrar
-Version:	5.10
-Release:	2
+Version:	5.20
+Release:	1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%oversion.tar.gz
 Url:		http://www.rarlab.com/rar_add.htm
@@ -18,7 +18,7 @@ somewhat popular on DOS based machines.
 %setup -qn %{name}
 
 %build
-make -f makefile CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags} -pthread" STRIP=true
+make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}

@@ -1,5 +1,2 @@
-removed_sources:
-  unrarsrc-4.2.4.tar.gz: 1cc29603fb4e4df16a3aa9bfc7da1afaf0923259
-  unrarsrc-5.1.4.tar.gz: a7477ced67816de0a18dd4722e0729752200b097
 sources:
-  unrarsrc-5.1.5.tar.gz: a25fd20ad18afc053d100eecf8a56aa7490cfdca
+  unrarsrc-5.2.2.tar.gz: 5e30ab23aab82d2f8b747c5b6f7187e364eb360c
