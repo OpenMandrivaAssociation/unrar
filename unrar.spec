@@ -16,12 +16,20 @@ somewhat popular on DOS based machines.
 %setup -qn %{name}
 
 %build
-make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true
+# build main binary
+make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
+
+# build dynamic library
+make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
 install -m 755 unrar %{buildroot}%{_bindir}
 
+install -d -m 755 %{buildroot}%{_libdir}
+install -m 755 libunrar.so %{buildroot}%{_libdir}
+
 %files
 %doc license.txt readme.txt
 %{_bindir}/unrar
+%{_libdir}/libunrar.so
