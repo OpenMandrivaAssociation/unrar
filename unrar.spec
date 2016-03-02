@@ -1,10 +1,8 @@
-%define oversion 5.1.4
-
 Name:		unrar
-Version:	5.10
-Release:	1
+Version:	5.3.11
+Release:	0.1
 Summary:	Decompressor for .rar format archives
-Source0: 	http://www.rarlab.com/rar/%{name}src-%oversion.tar.gz
+Source0: 	http://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
 Url:		http://www.rarlab.com/rar_add.htm
 License:	Freeware
 Group:		Archiving/Compression
@@ -18,13 +16,20 @@ somewhat popular on DOS based machines.
 %setup -qn %{name}
 
 %build
-make -f makefile CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags} -lpthread" STRIP=true
+# build main binary
+make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
+
+# build dynamic library
+make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
 install -m 755 unrar %{buildroot}%{_bindir}
 
+install -d -m 755 %{buildroot}%{_libdir}
+install -m 755 libunrar.so %{buildroot}%{_libdir}
+
 %files
 %doc license.txt readme.txt
 %{_bindir}/unrar
-
+%{_libdir}/libunrar.so
