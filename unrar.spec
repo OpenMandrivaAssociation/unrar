@@ -1,5 +1,5 @@
 Name:		unrar
-Version:	5.6.4
+Version:	5.6.5
 Release:	1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
