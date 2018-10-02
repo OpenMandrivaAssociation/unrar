@@ -1,5 +1,5 @@
 Name:		unrar
-Version:	5.6.5
+Version:	5.6.7
 Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
@@ -18,10 +18,10 @@ somewhat popular on DOS based machines.
 
 %build
 # build main binary
-make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
+make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
 
 # build dynamic library
-make -f makefile CXXFLAGS="%{optflags}" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
+make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
