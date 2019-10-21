@@ -1,5 +1,5 @@
 Name:		unrar
-Version:	5.8.2
+Version:	5.8.3
 Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
