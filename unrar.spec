@@ -25,7 +25,7 @@ make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
-install -m 755 unrar %{buildroot}%{_bindir}
+install -m 755 UnRAR %{buildroot}%{_bindir}
 
 install -d -m 755 %{buildroot}%{_libdir}
 install -m 755 libunrar.so %{buildroot}%{_libdir}
