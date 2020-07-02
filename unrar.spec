@@ -23,6 +23,8 @@ make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%
 # build dynamic library
 make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
 
+mv UnRAR.vcxproj unrar
+
 %install
 install -d -m 755 %{buildroot}%{_bindir}
 install -m 755 unrar %{buildroot}%{_bindir}
