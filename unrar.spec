@@ -16,6 +16,8 @@ somewhat popular on DOS based machines.
 %prep
 %setup -qn %{name}
 
+mv UnRAR.vcxproj unrar
+
 %build
 # build main binary
 make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
@@ -25,7 +27,7 @@ make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
-install -m 755 UnRAR.vcxproj %{buildroot}%{_bindir}
+install -m 755 unrar %{buildroot}%{_bindir}
 
 install -d -m 755 %{buildroot}%{_libdir}
 install -m 755 libunrar.so %{buildroot}%{_libdir}
