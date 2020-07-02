@@ -16,14 +16,14 @@ somewhat popular on DOS based machines.
 %prep
 %setup -qn %{name}
 
-mv UnRAR.vcxproj unrar
-
 %build
 # build main binary
 make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true unrar
 
 # build dynamic library
 make -f makefile CXXFLAGS="%{optflags} -fPIC" CC=%{__cc} CXX=%{__cxx} LDFLAGS="%{ldflags} -pthread" STRIP=true lib
+
+mv UnRAR.vcxproj unrar
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
