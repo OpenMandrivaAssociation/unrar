@@ -1,6 +1,6 @@
 Name:		unrar
-Version:	6.2.2
-Release:	4
+Version:	6.2.8
+Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
