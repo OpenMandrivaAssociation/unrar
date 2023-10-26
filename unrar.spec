@@ -1,9 +1,13 @@
+# FIXME build failure with LTO, last verified with 6.2.12-1, clang 17.0.3
+#define _disable_lto 1
+
 Name:		unrar
-Version:	6.2.8
-Release:	3
+Version:	6.2.12
+Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
 Source0: 	http://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
+Patch0:		unrar-linkfix.patch
 Url:		http://www.rarlab.com/rar_add.htm
 License:	Freeware
 Group:		Archiving/Compression
@@ -14,7 +18,7 @@ The unrar program is used to uncompress .rar format archives, which were
 somewhat popular on DOS based machines.
 
 %prep
-%setup -qn %{name}
+%autosetup -p1 -n %{name}
 
 %build
 # build main binary
