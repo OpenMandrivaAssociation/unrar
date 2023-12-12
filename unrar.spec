@@ -2,7 +2,7 @@
 #define _disable_lto 1
 
 Name:		unrar
-Version:	7.0.3
+Version:	7.0.4
 Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
