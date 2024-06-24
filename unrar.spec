@@ -2,13 +2,13 @@
 #define _disable_lto 1
 
 Name:		unrar
-Version:	7.0.7
+Version:	7.0.9
 Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
-Source0: 	http://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
+Source0: 	https://www.rarlab.com/rar/%{name}src-%{version}.tar.gz
 Patch0:		unrar-linkfix.patch
-Url:		http://www.rarlab.com/rar_add.htm
+Url:		https://www.rarlab.com/rar_add.htm
 License:	Freeware
 Group:		Archiving/Compression
 Conflicts:	bash-completion < 20031225
