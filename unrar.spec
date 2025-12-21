@@ -13,6 +13,7 @@ License:	Freeware
 Group:		Archiving/Compression
 Conflicts:	bash-completion < 20031225
 
+BuildRequires:	make
 %description
 The unrar program is used to uncompress .rar format archives, which were
 somewhat popular on DOS based machines.
