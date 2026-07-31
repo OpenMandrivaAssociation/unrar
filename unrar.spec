@@ -2,7 +2,7 @@
 #define _disable_lto 1
 
 Name:		unrar
-Version:	7.2.4
+Version:	7.2.7
 Release:	1
 Epoch:		1
 Summary:	Decompressor for .rar format archives
@@ -19,7 +19,7 @@ The unrar program is used to uncompress .rar format archives, which were
 somewhat popular on DOS based machines.
 
 %prep
-%autosetup -p1 -n %{name}
+%autosetup -p1 -n unrar
 
 %build
 # build main binary
